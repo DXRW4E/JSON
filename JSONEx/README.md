@@ -13,7 +13,7 @@ in simple words it does not support resize, If a capacity change takes place, al
 //  Member3[3]
 //  Member4[4]
 
-HJSON hJSKey2 = NULL; DWORD dwLastError = 0;
+HJSON hJSKey2 = NULL, hJSKey5 = NULL; DWORD dwLastError = 0;
 dwLastError = JSONOpenKey(hMemberList, L"Member2", 7, &hJSKey2);
 //return ERROR_SUCCESS 0
 
@@ -28,7 +28,7 @@ dwLastError = JSONDeleteKey(hMemberList, L"Member3", 7);
 
 ***To avoid all this you need to use JSONReserve()***
 ```c
-HJSON hJSKey2 = NULL; DWORD dwLastError = 0;
+HJSON hJSKey2 = NULL, hJSKey5 = NULL; DWORD dwLastError = 0;
 dwLastError = JSONReserve(hMemberList, 10);
 //return ERROR_SUCCESS 0
 
