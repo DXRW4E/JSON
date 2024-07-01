@@ -134,7 +134,7 @@ WCHAR wsJSONStrEx[] = L"{"     \
 # JSONParse() && JSONStringify()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL; LPCWSTR lpEnd = NULL; LPWSTR lpStrfy = NULL;
@@ -156,7 +156,7 @@ int main() {
 # JSONOpenKey() && JSONOpenKeyEx() && JSONOpenElement()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL, hJSKey = NULL, hJSElement = NULL; LPWSTR lpszJSON = NULL; LPCWSTR lpEnd = NULL; DWORD dwLastError = 0, cchStr = 0;
@@ -202,7 +202,7 @@ int main() {
 # JSONCreateKey() && JSONInsertKey() && JSONCreateElement() && JSONInsertElement()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL, hJSKey = NULL, hJSNewKey = NULL, hJSElement = NULL; 
@@ -267,7 +267,7 @@ int main() {
 # JSONRenameKey()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL, hJSKey = NULL; LPCWSTR lpEnd = NULL, lpStrfy = NULL; DWORD dwLastError = 0;
@@ -298,7 +298,7 @@ int main() {
 # JSONDeleteKey() && JSONDeleteKeyEx() && JSONDeleteOnClose()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL, hJSKey = NULL; LPCWSTR lpEnd = NULL, lpStrfy = NULL; DWORD dwLastError = 0;
@@ -334,7 +334,7 @@ int main() {
 # JSONEnumKey()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL, hJSKey = NULL, hJSEnumKey = NULL; LPCWSTR lpEnd = NULL; DWORD dwLastError = 0, dwIndex = 0;
@@ -401,7 +401,7 @@ int main() {
 # JSONCopyTreeEx()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL, hJSCopy = NULL; LPCWSTR lpEnd = NULL, lpStrfy = NULL;
@@ -430,7 +430,7 @@ int main() {
 # JSONAppend()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL, hJSNew = NULL; LPWSTR lpszJSON = NULL, lpStrfy = NULL; LPCWSTR lpEnd = NULL; DWORD dwLastError = 0, cchStr = 0;
@@ -462,7 +462,7 @@ int main() {
 # JSONMerge()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL, hJSNew = NULL, hJSONToMrg = NULL; LPCWSTR lpEnd = NULL, lpStrfy = NULL; DWORD dwLastError = 0;
@@ -520,7 +520,7 @@ int main() {
 # JSONReserve()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL; LPCWSTR lpEnd = NULL; DWORD dwLastError = 0;
@@ -543,7 +543,7 @@ int main() {
 # JSONSort() && JSONQSort()
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 INT MyJSONObjCompare(PCJSON piMem, PCJSON pjMem) {
 	return StringCompareI(piMem->lpMembers[0].lpszKeyName, pjMem->lpMembers[0].lpszKeyName); //StrCmp/StringCompare - StrCmpN/StringCompareN - StrCmpI/StringCompareI - StrCmpNI/StringCompareNI
@@ -594,7 +594,7 @@ int main() {
 # JSONSetValue() && Create JSON Object, Array, String, Number
 ```c
 #include <stdio.h>
-#include "JSON.c"
+#include "JSONEx.c"
 
 int main() {
 	HJSON hJSON = NULL, hJSNewKey = NULL, hJSKey = NULL, hJSKeyEx = NULL, hJSArray = NULL, hJSEnumKey = NULL;
