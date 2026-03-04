@@ -439,10 +439,10 @@ LPWSTR JSONUnEscapeStr(LPCWSTR lpcString, DWORD cchString, DWORD cchUnEscapeStr)
 				case L'f': *lpXChr = L'\x000C'; break; // Form feed (FF)
 				case L'r': *lpXChr = L'\x000D'; break; // Carriage return (CR)
 				case L'u':
-					if (cStr < 5) goto ReturnError; cStr -= 5;
-					for (cCh = 4, *lpXChr = L'\0', ++lpStr; cCh; --cCh, ++lpStr) {
+					if (cStr < 5) goto ReturnError; cStr -= 4;
+					for (cCh = 4, *lpXChr = L'\0'; cCh; --cCh) {
 						if (*lpStr >= L'A') {
-							if (*lpStr > L'F') {
+							if (*++lpStr > L'F') {
 								if (*lpStr < L'a' || *lpStr > L'f') goto ReturnError; //break;
 								*lpXChr = (*lpXChr << 4) + (*lpStr - L'a') + 10;
 							}
