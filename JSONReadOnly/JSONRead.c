@@ -441,8 +441,8 @@ LPWSTR JSONUnEscapeStr(LPCWSTR lpcString, DWORD cchString, DWORD cchUnEscapeStr)
 				case L'u':
 					if (cStr < 5) goto ReturnError; cStr -= 4;
 					for (cCh = 4, *lpXChr = L'\0'; cCh; --cCh) {
-						if (*lpStr >= L'A') {
-							if (*++lpStr > L'F') {
+						if (*++lpStr >= L'A') {
+							if (*lpStr > L'F') {
 								if (*lpStr < L'a' || *lpStr > L'f') goto ReturnError; //break;
 								*lpXChr = (*lpXChr << 4) + (*lpStr - L'a') + 10;
 							}
